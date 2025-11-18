@@ -3,7 +3,7 @@ import os
 import re
 
 # === Ruta donde se guardarán las imágenes ===
-save_path = os.path.expanduser("~/Desktop/Tesis/data/images")
+save_path = os.path.expanduser("images")
 os.makedirs(save_path, exist_ok=True)
 
 # === Inicializar cámara ===
