@@ -20,7 +20,7 @@ cfg.merge_from_file(model_zoo.get_config_file(
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6
 cfg.DATASETS.TRAIN = ("prueba1",)
 cfg.MODEL.WEIGHTS = "output/model_final.pth"
-cfg.MODEL.ROI_HEADS.NUM_CLASSES = 4  # according to your training
+cfg.MODEL.ROI_HEADS.NUM_CLASSES = 4  
 
 predictor = DefaultPredictor(cfg)
 CLASS_NAMES = ["COIL ON PLUG", "DISTRIBUTOR", "IGNITION COIL", "BACKGROUND"]
