@@ -2,7 +2,7 @@ from pyModbusTCP.server import ModbusServer
 import time
 
 # === Configuración ===
-SERVER_HOST = "0.0.0.0"       # Escucha en todas las interfaces (incluida la red del UR)
+SERVER_HOST = "0.0.0.0"       # Escucha en todas las interfaces 
 SERVER_PORT = 502             # Puerto TCP Modbus estándar
 REGISTER_ADDR = 128           # Dirección del registro
 VALUE = 0                     # Valor que mantendrá el servidor
