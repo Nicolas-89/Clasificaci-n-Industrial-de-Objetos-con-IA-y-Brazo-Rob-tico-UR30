@@ -19,15 +19,12 @@ cfg.MODEL.ROI_HEADS.NUM_CLASSES = 4  # según entrenamiento
 
 predictor = DefaultPredictor(cfg)
 
-# ==========================
-# CLASES (según tu entrenamiento)
-# ==========================
 CLASS_NAMES = ["COIL ON PLUG", "DISTRIBUTOR", "IGNITION COIL", "BACKGROUND"]
 
 # ==========================
 # CAPTURA DE VIDEO EN VIVO
 # ==========================
-cap = cv2.VideoCapture(2)  # Ajusta el índice según tu cámara
+cap = cv2.VideoCapture(2)  
 
 if not cap.isOpened():
     print("❌ No se puede abrir la cámara. Prueba otro índice (0, 1, 2).")
