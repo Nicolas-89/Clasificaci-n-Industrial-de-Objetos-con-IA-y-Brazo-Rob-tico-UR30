@@ -78,7 +78,7 @@ try:
             classes = instances.pred_classes.numpy()
             detected_class = int(classes[0])
 
-            # 🔁 Map detected class to Modbus value
+            # Map detected class to Modbus value
             if detected_class == 0:
                 detected_value = 2  # COIL ON PLUG
             elif detected_class == 1:
@@ -94,9 +94,6 @@ try:
             detected_value = 999
             print("🟨 No detections")
 
-        # ===========================
-        # STABILITY LOGIC (5s delay)
-        # ===========================
         current_time = time.time()
 
         if detected_value != pending_class:
@@ -112,9 +109,6 @@ try:
                 last_confirmed_value = detected_value
                 print(f"✅ Value confirmed after {STABILITY_TIME}s: {detected_value}")
 
-        # ===========================
-        # VISUALIZATION
-        # ===========================
         vis = Visualizer(frame[:, :, ::-1],
                          MetadataCatalog.get(cfg.DATASETS.TRAIN[0]),
                          scale=1.0)
